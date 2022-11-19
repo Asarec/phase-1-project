@@ -33,6 +33,29 @@ function fetchResults(query) {
     });
 
     listOfResults.innerHTML = '';
+
+    armamentCategories.forEach(category => {
+        fetch(`https://eldenring.fanapis.com/api/${category}?name=${query}`)
+        .then(response => response.json())
+        .then(data => {
+            resultCount += data.count;
+            if (resultCount === 0) {
+                listOfResults.innerHTML = '';
+                listOfResults.appendChild(noResultsMsg);
+            } else {
+                noResultsMsg.remove();
+                data.data.forEach(result => displayResults(result, category));
+            }
+        });
+    });
+}
+
+/**
+ * Creates and appends a list item to the result list.
+ * @param {object} result - API result.
+ * @param {string} category - API result's category.
+ */
+function displayResults(result, category) {
 }
 
 /**
