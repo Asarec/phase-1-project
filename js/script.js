@@ -144,8 +144,11 @@ function callModal(result) {
                             }
                         });
                     });
+
                     totalClassScores[startingClass] = classScore;
                 });
+
+                bestClass = Object.keys(totalClassScores).reduce((key, value) => totalClassScores[value] < totalClassScores[key] ? value : key);
             });
         }
     }
