@@ -77,6 +77,21 @@ function displayResults(result) {
 function callModal(result) {
     const modalOverlay = createElement('div', {'class': ['modal-bg-overlay']});
     document.body.appendChild(modalOverlay);
+
+    modalOverlay.innerHTML = `
+        <div class="modal-container">
+            <div class='close'>CLOSE</div>
+            <h2>${result.name}</h2>
+            <h3>${result.category}</h3>
+            <img src="${result.image}" class="modal-image">
+            <div class="modal-armament-description">
+                <h3>ARMAMENT DESCRIPTION</h3>
+                <p class="modal-description">${result.description}</p>
+            </div>
+            <div class="best-class" style="display:none;"></div>
+            <div class="modal-stat-container"></div>
+        </div>
+    `;
 }
 
 /**
