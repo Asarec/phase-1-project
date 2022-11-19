@@ -75,7 +75,10 @@ function displayResults(result, category) {
     });
 }
 
-function callModal(result) {}
+function callModal(result) {
+    const modalOverlay = createElement('div', {'class': ['modal-bg-overlay']});
+    document.body.appendChild(modalOverlay);
+}
 
 /**
  * Creates an element with attributes and values.
