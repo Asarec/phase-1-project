@@ -92,6 +92,31 @@ function callModal(result) {
             <div class="modal-stat-container"></div>
         </div>
     `;
+
+    Object.keys(result).forEach(key => {
+        switch (true) {
+            case key === 'attack':
+                displayStat(result[key], 'attack-rating');
+                break;
+            case key === 'defence':
+                displayStat(result[key], 'defense');
+                break;
+            case key === 'requiredAttributes':
+                displayStat(result[key], 'required-stats');
+                break;
+            case key === 'scalesWith':
+                displayStat(result[key], 'scaling');
+                break;
+            case key === 'dmgNegation':
+                displayStat(result[key], 'damage-negation');
+                break;
+            case key === 'resistance':
+                displayStat(result[key], 'resistance');
+                break;
+        }
+    });
+
+    function displayStat(keyName, className) {}
 }
 
 /**
