@@ -120,6 +120,11 @@ function callModal(result) {
         }
     });
 
+    /**
+     * Takes a key, retrieves armament stats and displays in the modal box.
+     * @param {object} keyName - Houses passed armament stats.
+     * @param {string} className - CSS class name used to properly display stats.
+     */
     function displayStat(keyName, className) {
         const statListContainer = document.querySelector('.modal-stat-container');
         const statList = createElement('ul', {'class': ['modal-stat-info', className]});
