@@ -133,7 +133,11 @@ function callModal(result) {
                 let bestClass;
 
                 Object.keys(data).forEach(startingClass => {
-                    console.log(startingClass);
+                    let classScore = 0;
+
+                    Object.keys(data[startingClass]).forEach(classStat => {
+                        console.log(classStat);
+                    });
                 });
             });
         }
