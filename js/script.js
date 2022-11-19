@@ -7,6 +7,16 @@ const errorMsg = createElement('h3', {
 
 form.addEventListener('submit', event => {
     event.preventDefault();
+
+    if (form.firstChild.value.trim()) {
+        errorMsg.remove();
+        form.firstChild.classList.add('active-input');
+        form.after(listOfResults);
+    } else {
+        listOfResults.remove();
+        form.firstChild.classList.remove('active-input');
+        form.after(errorMsg);
+    }
 });
 
 /**
