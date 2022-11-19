@@ -159,6 +159,10 @@ function callModal(result) {
                 bestClassDiv.innerHTML = `<b>Best Starting Class:</b> ${bestClass}`;
             });
         }
+
+        keyName.forEach(stat => {
+            console.log(stat);
+        });
     }
 }
 
