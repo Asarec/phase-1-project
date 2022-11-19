@@ -12,12 +12,19 @@ form.addEventListener('submit', event => {
         errorMsg.remove();
         form.firstChild.classList.add('active-input');
         form.after(listOfResults);
+        fetchResults(form.firstChild.value);
     } else {
         listOfResults.remove();
         form.firstChild.classList.remove('active-input');
         form.after(errorMsg);
     }
 });
+
+/**
+ * Submits a fetch request to the API and invoke the results through another function.
+ * @param {string} query - The query submitted by the input field.
+ */
+ function fetchResults(query) {}
 
 /**
  * Creates an element with attributes and values.
