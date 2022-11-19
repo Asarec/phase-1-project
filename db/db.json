@@ -1,0 +1,72 @@
+{
+    "Hero": {
+        "Str": 16,
+        "Dex": 9,
+        "Int": 7,
+        "Fai": 8,
+        "Arc": 11
+    },
+    "Bandit": {
+        "Str": 9,
+        "Dex": 13,
+        "Int": 9,
+        "Fai": 8,
+        "Arc": 14
+    },
+    "Astrologer": {
+        "Str": 8,
+        "Dex": 12,
+        "Int": 16,
+        "Fai": 7,
+        "Arc": 9
+    },
+    "Warrior": {
+        "Str": 10,
+        "Dex": 16,
+        "Int": 10,
+        "Fai": 8,
+        "Arc": 9
+    },
+    "Prisoner": {
+        "Str": 11,
+        "Dex": 14,
+        "Int": 14,
+        "Fai": 6,
+        "Arc": 9
+    },
+    "Confessor": {
+        "Str": 12,
+        "Dex": 12,
+        "Int": 9,
+        "Fai": 14,
+        "Arc": 9
+    },
+    "Wretch": {
+        "Str": 10,
+        "Dex": 10,
+        "Int": 10,
+        "Fai": 10,
+        "Arc": 10
+    },
+    "Vagabond": {
+        "Str": 14,
+        "Dex": 13,
+        "Int": 9,
+        "Fai": 9,
+        "Arc": 7
+    },
+    "Prophet": {
+        "Str": 11,
+        "Dex": 10,
+        "Int": 7,
+        "Fai": 16,
+        "Arc": 10
+    },
+    "Samurai": {
+        "Str": 12,
+        "Dex": 15,
+        "Int": 9,
+        "Fai": 8,
+        "Arc": 8
+    }
+}
