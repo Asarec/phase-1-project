@@ -56,6 +56,15 @@ function fetchResults(query) {
  * @param {string} category - API result's category.
  */
 function displayResults(result, category) {
+    const resultContainer = document.createElement('li');
+    listOfResults.appendChild(resultContainer);
+    resultContainer.innerHTML = `
+        <img src="${result.image}" class="result-list-image">
+        <div>
+            <h2>${result.name}</h2>
+            <h3>${result.category}</h3>
+        </div>
+    `;
 }
 
 /**
