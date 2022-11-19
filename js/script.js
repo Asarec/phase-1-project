@@ -44,7 +44,7 @@ function fetchResults(query) {
                 listOfResults.appendChild(noResultsMsg);
             } else {
                 noResultsMsg.remove();
-                data.data.forEach(result => displayResults(result, category));
+                data.data.forEach(result => displayResults(result));
             }
         });
     });
@@ -53,9 +53,8 @@ function fetchResults(query) {
 /**
  * Creates and appends a list item to the result list.
  * @param {object} result - API result.
- * @param {string} category - API result's category.
  */
-function displayResults(result, category) {
+function displayResults(result) {
     const resultContainer = document.createElement('li');
     listOfResults.appendChild(resultContainer);
     resultContainer.innerHTML = `
