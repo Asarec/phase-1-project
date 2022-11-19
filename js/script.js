@@ -5,6 +5,10 @@ const errorMsg = createElement('h3', {
     'content': 'PLEASE TRY AGAIN'
 });
 
+form.addEventListener('submit', event => {
+    event.preventDefault();
+});
+
 /**
  * Creates an element with attributes and values.
  * @param {string} tag - HTML tag to create.
