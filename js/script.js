@@ -74,6 +74,10 @@ function displayResults(result) {
     });
 }
 
+/**
+ * Calls modal box and displays detailed information about the selected armament.
+ * @param {object} result - The selected armament from search results.
+ */
 function callModal(result) {
     const modalOverlay = createElement('div', {'class': ['modal-bg-overlay']});
     document.body.appendChild(modalOverlay);
