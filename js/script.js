@@ -24,7 +24,16 @@ form.addEventListener('submit', event => {
  * Submits a fetch request to the API and invoke the results through another function.
  * @param {string} query - The query submitted by the input field.
  */
- function fetchResults(query) {}
+function fetchResults(query) {
+    let resultCount = 0;
+    const armamentCategories = ['weapons', 'armors'];
+    const noResultsMsg = createElement('h2', {
+        'class': ['result-error'],
+        'content': 'NO RESULTS FOUND'
+    });
+
+    listOfResults.innerHTML = '';
+}
 
 /**
  * Creates an element with attributes and values.
