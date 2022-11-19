@@ -65,6 +65,8 @@ function displayResults(result, category) {
             <h3>${result.category}</h3>
         </div>
     `;
+
+    resultContainer.addEventListener('click', event => {});
 }
 
 /**
