@@ -136,7 +136,13 @@ function callModal(result) {
                     let classScore = 0;
 
                     Object.keys(data[startingClass]).forEach(classStat => {
-                        console.log(classStat);
+                        keyName.forEach(requiredStat => {
+                            if (classStat === requiredStat.name) {
+                                if (data[startingClass][classStat] < requiredStat.amount || requiredStat.amount - data[startingClass][classStat] >= 0) {
+                                    classScore += requiredStat.amount - data[startingClass][classStat];
+                                }
+                            }
+                        });
                     });
                 });
             });
