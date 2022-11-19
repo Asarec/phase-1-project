@@ -68,6 +68,9 @@ function displayResults(result, category) {
 
     resultContainer.addEventListener('click', event => {
         if (event.currentTarget) callModal(result);
+
+        form.firstChild.value = '';
+        form.firstChild.classList.remove('active-input');
     });
 }
 
