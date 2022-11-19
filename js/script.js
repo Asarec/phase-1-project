@@ -149,6 +149,9 @@ function callModal(result) {
                 });
 
                 bestClass = Object.keys(totalClassScores).reduce((key, value) => totalClassScores[value] < totalClassScores[key] ? value : key);
+
+                bestClassDiv.removeAttribute('style')
+                bestClassDiv.innerHTML = `<b>Best Starting Class:</b> ${bestClass}`;
             });
         }
     }
