@@ -127,7 +127,15 @@ function callModal(result) {
         if (className === 'required-stats') {
             fetch('./db/db.json')
             .then(response => response.json())
-            .then(data => console.log(data));
+            .then(data => {
+                const totalClassScores = {};
+                const bestClassDiv = document.querySelector('.best-class');
+                let bestClass;
+
+                Object.keys(data).forEach(startingClass => {
+                    console.log(startingClass);
+                });
+            });
         }
     }
 }
