@@ -66,8 +66,12 @@ function displayResults(result, category) {
         </div>
     `;
 
-    resultContainer.addEventListener('click', event => {});
+    resultContainer.addEventListener('click', event => {
+        if (event.currentTarget) callModal(result);
+    });
 }
+
+function callModal(result) {}
 
 /**
  * Creates an element with attributes and values.
