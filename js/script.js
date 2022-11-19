@@ -120,7 +120,16 @@ function callModal(result) {
         }
     });
 
-    function displayStat(keyName, className) {}
+    function displayStat(keyName, className) {
+        const statListContainer = document.querySelector('.modal-stat-container');
+        const statList = createElement('ul', {'class': ['modal-stat-info', className]});
+
+        if (className === 'required-stats') {
+            fetch('./db/db.json')
+            .then(response => response.json())
+            .then(data => console.log(data));
+        }
+    }
 }
 
 /**
