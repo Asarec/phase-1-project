@@ -144,6 +144,7 @@ function callModal(result) {
                             }
                         });
                     });
+                    totalClassScores[startingClass] = classScore;
                 });
             });
         }
