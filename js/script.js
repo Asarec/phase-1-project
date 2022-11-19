@@ -71,6 +71,7 @@ function displayResults(result, category) {
 
         form.firstChild.value = '';
         form.firstChild.classList.remove('active-input');
+        listOfResults.remove();
     });
 }
 
