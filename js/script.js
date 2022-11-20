@@ -161,7 +161,26 @@ function callModal(result) {
         }
 
         keyName.forEach(stat => {
-            console.log(stat);
+            const statItem = document.createElement('li');
+            let amountScaling;
+
+            switch (true) {
+                case stat.amount !== undefined:
+                    amountScaling = stat.amount;
+                    break;
+                case stat.scaling !== undefined:
+                    amountScaling = stat.scaling;
+                    break;
+                default:
+                    amountScaling = 'N/A';
+            }
+
+            statItem.innerHTML = `
+                <b>${stat.name}</b>
+                <span>${amountScaling}</span>
+            `;
+
+            statList.appendChild(statItem);
         });
     }
 }
