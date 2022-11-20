@@ -116,7 +116,6 @@ function callModal(result) {
                 break;
             case key === 'resistance':
                 displayStat(result[key], 'resistance');
-                break;
         }
     });
 
@@ -202,12 +201,15 @@ function createElement(tag, attributes) {
     const element = document.createElement(tag);
 
     Object.keys(attributes).forEach(key => {
-        if (key === 'class') {
-            element.classList.add.apply(element.classList, attributes[key]);
-        } else if (key ==='content') {
-            element.innerText = attributes[key];
-        } else {
-            element.setAttribute(key, attributes[key]);
+        switch (true) {
+            case key === 'class':
+                element.classList.add.apply(element.classList, attributes[key]);
+                break;
+            case key === 'content':
+                element.innerText = attributes[key];
+                break;
+            default:
+                element.setAttribute(key, attributes[key]);
         }
     });
 
