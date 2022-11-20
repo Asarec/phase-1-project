@@ -182,7 +182,14 @@ function callModal(result) {
 
             statList.appendChild(statItem);
         });
+
+        statListContainer.appendChild(statList);
     }
+
+    document.querySelector('.close').addEventListener('click', _ => modalOverlay.remove());
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') modalOverlay.remove();
+    });
 }
 
 /**
