@@ -142,7 +142,8 @@ function callModal(result) {
                     Object.keys(data[startingClass]).forEach(classStat => {
                         keyName.forEach(requiredStat => {
                             if (classStat === requiredStat.name) {
-                                if (data[startingClass][classStat] < requiredStat.amount || requiredStat.amount - data[startingClass][classStat] >= 0) {
+                                if (data[startingClass][classStat] < requiredStat.amount
+                                || requiredStat.amount - data[startingClass][classStat] >= 0) {
                                     classScore += requiredStat.amount - data[startingClass][classStat];
                                 }
                             }
@@ -154,7 +155,7 @@ function callModal(result) {
 
                 bestClass = Object.keys(totalClassScores).reduce((key, value) => totalClassScores[value] < totalClassScores[key] ? value : key);
 
-                bestClassDiv.removeAttribute('style')
+                bestClassDiv.removeAttribute('style');
                 bestClassDiv.innerHTML = `<b>Best Starting Class:</b> ${bestClass}`;
             });
         }
